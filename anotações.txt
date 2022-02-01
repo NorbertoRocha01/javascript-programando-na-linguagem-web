@@ -1,0 +1,111 @@
+
+
+  Função DOCUMENT   -->> mostra todos os comandos do html
+
+
+       console.log(document.querySelection("h1"));
+
+       -->> mostra os comandos do html da tag H1
+
+
+       var titulo = soxumwnt.querySelector("h1");
+       console.log(titulo);
+       console.log(titulo.textContent);
+           -->> "Aparecida Nutrição"
+
+       titulo.textContent = " Bananna  "
+            irá mudar o titulo para  Bananna 
+
+
+
+ Importar para o HTML arquivos JavaScript
+
+        <script src="contador.js"></script>
+
+
+
+---------------------------------------
+
+  var titulo = document.querySelector(".titulo");
+  titulo.textContent = "Aparecida Nutricionistas";
+
+  var paciente = document.querySelector("#primeiro-paciente");
+
+var tdpeso = paciente.querySelector(".infor-peso");
+var peso = tdpeso.textContent;
+---------------------------------------
+
+  Selecionar todos os itens da TABELA em um FORM
+ 
+   var pacientes = document.querySelectorAll(".paciente");
+       ==>> cria um array com todos os elementos das classes 
+            definidas como "paciente"
+
+
+   04-Eventos, Formularios e criando elementos 
+      AULA 05 e 06
+https://cursos.alura.com.br/course/javascript-programando-na-linguagem-web/task/24209
+
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var form = document.querySelector("#form-adiciona");
+
+    var nome = form.nome.value;
+    var peso = form.peso.value;
+    var altura = form.altura.value;
+    var gordura = form.gordura.value;
+
+    var pacienteTr = document.createElement("tr");
+
+    var nomeTd = document.createElement("td");
+    var pesoTd = document.createElement("td");
+    var alturaTd = document.createElement("td");
+    var gorduraTd = document.createElement("td");
+    var imcTd = document.createElement("td");
+
+    nomeTd.textContent = nome;
+    pesoTd.textContent = peso;
+    alturaTd.textContent = altura;
+    gorduraTd.textContent = gordura;
+
+    pacienteTr.appendChild(nomeTd);
+    pacienteTr.appendChild(pesoTd);
+    pacienteTr.appendChild(alturaTd);
+    pacienteTr.appendChild(gorduraTd);
+
+    var tabela = document.querySelector("#tabela-pacientes");
+
+    tabela.appendChild(pacienteTr);
+
+});
+
+
+--------------------------------------------------
+
+   A "!" serve para inverter a opção logica
+
+  var alturaEhValida = true ;
+
+  if(!alturaEhValida) {
+
+  }
+
+     ===>> só irá entrar na função se ALTURAEHVALIDA for FALSE
+
+---------------------------------------------------
+
+Event reference
+https://developer.mozilla.org/pt-BR/docs/Web/Events
+
+
+----------------------------------
+
+
+
+
+
+
+
+
